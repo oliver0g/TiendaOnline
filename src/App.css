@@ -1,0 +1,151 @@
+/* ===== Root container ===== */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+}
+
+/* ===== Logo ===== */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  cursor: pointer;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* ===== Cards ===== */
+.card {
+  padding: 2em;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  transition: transform 200ms, box-shadow 200ms;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #646cff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 200ms;
+}
+button:hover {
+  background-color: #4d54d1;
+}
+button:focus {
+  outline: 3px solid #a0a0ff;
+}
+
+/* ===== Inputs ===== */
+input, select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: 0.25rem;
+  width: 200px;
+}
+input:focus, select:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+/* ===== Navbar ===== */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+nav button {
+  flex: 1 1 auto;
+  min-width: 120px;
+}
+
+/* ===== Product List ===== */
+.product-card {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+.product-card h3 {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+.product-card p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+/* ===== Cart & Orders ===== */
+.cart-item, .order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+.cart-item img, .order-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+/* ===== Loading, Empty, Error States ===== */
+.loading, .empty, .error {
+  color: #888;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .product-card { width: 45%; }
+  nav { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .product-card { width: 100%; }
+  input, select { width: 100%; }
+  button { width: 100%; margin-top: 0.5rem; }
+}
